@@ -1,6 +1,8 @@
 from app import app
 from flask import render_template, request, redirect, url_for, flash
 
+import datetime
+
 
 ###
 # Routing for your application.
@@ -48,7 +50,13 @@ def page_not_found(error):
 
 
 
-
+# Additional Implementations
 @app.route("/profile")
 def profile():
-    return render_template('profile.html'), 200
+    return render_template('profile.html', date_format=format_date_joined()), 200
+
+def format_date_joined():
+    date_given = datetime.datetime(2023, 9, 4)
+    date_format = date_given.strftime("%B, %Y")
+    return date_format
+    
