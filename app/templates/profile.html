@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block main %}
+<div class='profile'>
+    <div class='header'>
+        <img class='avatar' src="{{ url_for('static', filename='john.jpg') }}" alt='profile' />
+        <h2 class='name'>Ezra Muir</h2>
+        <p><i class='info'>@ezramuir</i></p>
+        <p><i class='info'>Kingston, Jamaica</i></p>
+        <p><i class='info'>Joined in 2023 </i></p>
+    </div>
+    <div class='body'>
+        <p class='info'>
+            I am a software engineer with a passion for creating beautiful and functional web applications. I am currently working at a startup in Kingston. I am also a huge fan of the outdoors and love to travel.
+        </p>
+        <div class='stats'>
+            <div class='stat'>
+                <h3>7</h3>
+                <h6 class='info'>Posts</h6>
+            </div>
+            <div class='stat'>
+                <h3>100</h3>
+                <h6 class='info'>Following</h6>
+            </div>
+            <div class='stat'>
+                <h3>250</h3>
+                <h6 class='info'>Followers</h6>
+            </div>
+        </div>
+        <div class='follow'>
+            <button>Follow</button>
+        </div>
+    </div>
+</div>
+{% endblock %}
