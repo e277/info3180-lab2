@@ -38,14 +38,18 @@ h6,
     object-fit: cover;
 }
 
-.profile .body {
+.body {
     padding: 20px;
 }
 
-.profile .body .stats {
+.body .stats {
     display: flex;
     justify-content: space-between;
     margin: 20px 60px;
+}
+
+.body .stat {
+    text-align: center;
 }
 
 .follow {
